@@ -1,0 +1,142 @@
+.homeWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+
+.homeImageWrapper {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+
+.homeImageWrapper img {
+  /* To create the desired appearance:  The <img>'s src image content is 100% opaque
+  whereas its background image is not.   Both have the exact same dimensions so that
+  they always line up. */
+  background-image: url("../assets/images/cooking-pot-logo-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 75%;
+  max-height: 750px;
+  margin-left: 60px;
+
+  display: block;
+
+  position: relative;
+}
+
+
+.homeVideoWrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+
+.homeVideoWrapper video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+@media (max-width: 769px) {
+  .homeVideoWrapper {
+    background-image: url("../assets/images/octopus-cooking.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .homeVideoWrapper video {
+    display: none;
+  }
+
+  .homeImageWrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .homeImageWrapper img {
+    width: 75%;
+    height: auto;
+    margin-left: 0;
+  }
+}
+
+
+@media (max-width: 769px) and (max-height: 799px) {
+  .homeImageWrapper {
+    justify-content: flex-start;
+  }
+
+  .homeImageWrapper img {
+    width: auto;
+    height: 75%;
+    min-width: 0;
+    margin-top: 13%;
+  }
+}
+
+
+@media (max-width: 769px) and (max-height: 699px) {
+  .homeImageWrapper img {
+    margin-top: 85px;
+  }
+}
+
+
+@media (max-width: 769px) and (max-height: 599px) {
+  .homeImageWrapper img {
+    height: 80%;
+    margin-top: 78px;
+  }
+}
+
+
+@media (max-width: 769px) and (max-height: 499px) {
+  .homeImageWrapper img {
+    margin-top: 72px;
+  }
+}
+
+
+@media (max-width: 769px) and (max-height: 449px) {
+  .homeImageWrapper img {
+    margin-top: 64px;
+  }
+}
+
+
+@media (max-width: 769px) and (max-height: 359px) {
+  .homeImageWrapper img {
+    margin-top: 59px;
+  }
+}
+
+
+@media (max-width: 519px) {
+  .homeImageWrapper {
+    justify-content: flex-start;
+  }
+
+  .homeImageWrapper img {
+    width: 95%;
+    height: auto;
+    margin-top: 80px;
+  }
+}

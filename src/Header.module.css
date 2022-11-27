@@ -1,0 +1,130 @@
+.header {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  z-index: 50;
+}
+
+
+.header ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.header li {
+  list-style: none;
+  margin-right: 30px;
+
+  position: relative;
+ }
+
+
+.header li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: -18px;
+  background-color: #d9d1ca;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+}
+
+
+.header a {
+  color: #f0e1c8;
+  font-family: "Bitter", serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #5b1531;
+  outline-color: #f0e1c8;
+
+  /* Added the following so you can apply a transform to an <a> */
+  display: block;
+
+  transition: transform 300ms;
+}
+
+
+.header a:hover {
+  color: #f4f4f4;
+  transform: scale(1.1);
+}
+
+
+a.active {
+  color: #5b1531;
+  text-shadow: 1px 1px 1px #f0e1c8;
+}
+
+
+@media (max-width: 769px) {
+  .header {
+    top: 21px;
+    right: 0;
+    left: 0;
+  }
+
+  .header ul {
+    justify-content: center;
+  }
+
+  .header li {
+    margin-right: 26px;
+  }
+
+  .header li:last-child {
+    margin-right: 0;
+  }
+
+  .header li:not(:last-child)::after {
+    right: -16px;
+  }
+}
+
+
+@media (max-width: 519px) {
+  .header a {
+    font-size: 1.2em;
+  }
+
+  .header li:not(:last-child)::after {
+    top: 13px;
+  }
+}
+
+
+@media (max-width: 459px) {
+  .header a {
+    font-size: 1em;
+  }
+
+  .header li:not(:last-child)::after {
+    top: 10px;
+  }
+}
+
+
+@media (max-width: 389px) {
+  .header a {
+    font-size: .9em;
+  }
+
+  .header li:not(:last-child)::after {
+    top: 9px;
+  }
+}
+
+
+@media (max-width: 359px) {
+  .header a {
+    font-size: .8em;
+  }
+
+  .header li:not(:last-child)::after {
+    top: 7px;
+  }
+}
